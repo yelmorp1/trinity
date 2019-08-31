@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {IMenu} from './interfaces/menu.interface';
+import { menu } from './mock-db/menu';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +8,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'trinity-page';
-  menuOpts = [
-    'Inicio',
-    'Mision',
-    'Vision',
-    'Contactanos'
-  ];
+  title = 'Trinity.ic';
+  menuOpts: IMenu[] = menu;
 }

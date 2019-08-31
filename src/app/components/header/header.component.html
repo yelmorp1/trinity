@@ -1,15 +1,17 @@
 <header id="head-nav">
   <a><img class="img-logo" src="./assets/images/dota2-logo.png" alt=""></a>
   <div class="head-midd">
-    <div class="share-text">
+    <!--<div class="share-text">
       <input type="text" name="Introduce texto aqui" value="">
-    </div>
+    </div> -->
     <div class="box-routes">
       <ul class="routes-links">
-        <li class="links" *ngFor="let option of options">
-          <a class="routes">{{ option }}</a>
-          <i class="material-icons">keyboard_arrow_down</i>
-        </li>
+        <li class="links" *ngFor="let option of options"
+        [routerLink]="['/',option.url]"
+        routerLinkActive="active">
+          <a class="routes">{{ option.title }}</a>
+        <!--  <i class="material-icons">keyboard_arrow_down</i>-->
+       </li>
       </ul>
     </div>
     <!--

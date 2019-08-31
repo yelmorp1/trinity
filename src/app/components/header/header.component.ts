@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import {IMenu} from '../../interfaces/menu.interface';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   
-  @Input() options: string[];
+  @Input() options: IMenu[];
  // @Input() tittle: string;
   constructor() { }
   
