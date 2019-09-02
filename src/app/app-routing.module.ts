@@ -6,6 +6,9 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { ProductoIndustrialComponent } from './pages/producto-industrial/producto-industrial.component'
 
 const routes: Routes = [
+  { path:  '',
+   redirectTo:  'inicio',
+    pathMatch:  'full' },
   {
     path: 'inicio',
     component: InicioComponent
@@ -21,6 +24,9 @@ const routes: Routes = [
   {
     path: 'produccionIndustrial',
     component: ProductoIndustrialComponent
+  },
+  { path:  '**',
+   redirectTo:  'inicio'
   }
 ];
 
