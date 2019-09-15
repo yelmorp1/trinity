@@ -1,0 +1,54 @@
+.footer-bottom{
+    margin-top: 30px;
+    width: 100%;
+    bottom: 0;
+    background-color: #a1887f;
+    text-align: center;
+    .text-list{
+        padding: 40px 0px 30px;
+        justify-content: space-between;
+        display: flex;
+        li{
+            color: white;
+            font-weight: 400;
+            list-style: none;
+        }
+        .tittle{
+            font-size: 15px;
+            font-weight: 500;
+        }
+        .text-right{
+            text-align: left !important;
+            li{
+                align-items: center;
+                display: flex;
+                i{
+                    font-size: 18px;
+                    margin-right: 8px;
+                }
+            }
+        }
+        .text-padd{
+            padding: 10px 30px;
+        }
+    }
+    .copy{
+        background-color: #8d6e63;
+        margin: 0px;
+        .text-copy{
+            list-style: none;
+            p{
+                color: white;
+                font-size: 13px;
+                margin: 0px;
+                padding: 20px 0px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 870px){
+    .copy{
+        padding: 0px;
+    }
+}

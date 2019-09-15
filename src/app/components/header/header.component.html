@@ -1,33 +1,38 @@
 <header id="head-nav">
-  <a><img class="img-logo" src="./assets/images/dota2-logo.png" alt=""></a>
-  <div class="head-midd">
-    <!--<div class="share-text">
-      <input type="text" name="Introduce texto aqui" value="">
-    </div> -->
-    <div class="box-routes">
+  <a class="image-logo">
+    <p>Trinity.ic</p>
+   <!--  <img class="img-logo" src="./assets/images/dota2-logo.png" alt=""> -->
+  </a>
+
+  <div class="box-routes">
+    <ul class="routes-links">
+      <li class="links breadcrumb-item" *ngFor="let option of options"
+      [routerLink]="['/',option.url]"
+      routerLinkActive="active">
+        <p class="routes">{{ option.title }}</p>
+      <!--  <i class="material-icons">keyboard_arrow_down</i>-->
+      </li>
+    </ul>
+  </div>
+
+</header>
+<div class="pos-f-t">
+  <nav class="navbar navbar-dark nav-color">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="nav-color p-4">
+      <h5 class="text-white h4">Trinity.ic</h5>
       <ul class="routes-links">
-        <li class="links" *ngFor="let option of options"
+        <li class="links text-white" *ngFor="let option of options"
         [routerLink]="['/',option.url]"
         routerLinkActive="active">
-          <a class="routes">{{ option.title }}</a>
+          <p class="routes">{{ option.title }}</p>
         <!--  <i class="material-icons">keyboard_arrow_down</i>-->
-       </li>
+        </li>
       </ul>
     </div>
-    <!--
-      <div class="box-routes">
-      <ul class="routes-links">
-        <li class="links"><a class="routes">Viajes</a><i class="material-icons">keyboard_arrow_down</i></li>
-        <li class="links"><a class="routes" href="#">Producto</a></li>
-        <li class="links"><a class="routes" href="#">Experiencias</a></li>
-        <li class="links"><a class="routes" href="#">Vales digitales</a></li>
-      </ul>
-    </div>
-    -->
   </div>
-  <div class="zone-user box">
-    <a>Login</a>
-    <a>Salir</a>
-    <a href="#">Ingresar</a>
-  </div>
-</header>
+</div>
